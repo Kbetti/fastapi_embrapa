@@ -15,22 +15,12 @@ def test_read_root():
     assert response.status_code == 200
     assert response.json() == {"message": "API para consulta de dados CSV da Embrapa"}
 
-# Testando o endpoint que retorna todos os CSVs
-def test_get_all_csv_data():
-    token = get_valid_token()
-    headers = {"Authorization": f"Bearer {token}"}
-    response = client.get("/csv_data/", headers=headers)
-    assert response.status_code == 200
-    assert isinstance(response.json(), dict)
-    # Checar se os arquivos CSV estão presentes
-    for i in range(1, 6):
-        assert f"arquivo_{i}" in response.json()
 
 # Testando o endpoint que retorna um CSV específico
 def test_get_csv_by_id():
     token = get_valid_token()
     headers = {"Authorization": f"Bearer {token}"}
-    response = client.get('/csv_data/1', headers=headers)
+    response = client.get('/exportacao', headers=headers)
 
     print(f"Status Code: {response.status_code}")
     print(f"Response JSON: {response.json()}")

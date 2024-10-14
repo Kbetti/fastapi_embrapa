@@ -4,11 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cfc9d044-8357-4916-9bef-f9512623a5fb" name="Changes" comment="Alterações 01-10" />
+    <list default="true" id="cfc9d044-8357-4916-9bef-f9512623a5fb" name="Changes" comment="Alterações 01-10">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scraping.py" beforeDir="false" afterPath="$PROJECT_DIR$/loader.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_main.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_main.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExportToHTMLSettings">
+    <option name="OUTPUT_DIRECTORY" value="$PROJECT_DIR$" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -22,12 +30,29 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;Kbetti&quot;
-  }
-}</component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "history": [
+    {
+      "state": "OPEN"
+    },
+    {
+      "state": "OPEN",
+      "author": "vinicunhac"
+    }
+  ],
+  "lastFilter": {}
+}]]></component>
+  <component name="GitHubPullRequestState"><![CDATA[{
+  "prStates": [
+    {
+      "id": {
+        "id": "PR_kwDOM1gKic5-dp-J",
+        "number": 1
+      },
+      "lastSeen": 1728867773552
+    }
+  ]
+}]]></component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/Kbetti/fastapi_embrapa&quot;,
@@ -60,6 +85,7 @@
     "Python.main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/kelley.betti_ifood/PycharmProjects/fastApiProject",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -74,7 +100,7 @@
       <recent name="C:\Users\kelley.betti_ifood\PycharmProjects\fastApiProject\app" />
     </key>
   </component>
-  <component name="RunManager" selected="FastAPI.fastApiProject">
+  <component name="RunManager" selected="Python tests.Python tests for test_main.test_get_csv_by_id">
     <configuration name="test_main | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/test_main.http" requestIdentifier="#1" runType="Run single request">
       <method v="2" />
     </configuration>
@@ -166,10 +192,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.main" />
-        <item itemvalue="Python tests.Python tests for test_main.test_get_all_csv_data" />
         <item itemvalue="Python tests.Python tests for test_main.test_get_csv_by_id" />
+        <item itemvalue="Python tests.Python tests for test_main.test_get_all_csv_data" />
         <item itemvalue="Python tests.Python tests for test_main.test_read_root" />
+        <item itemvalue="Python.main" />
         <item itemvalue="HTTP Request.test_main | #1" />
       </list>
     </recent_temporary>
@@ -193,7 +219,9 @@
       <workItem from="1726424448653" duration="4796000" />
       <workItem from="1727030795063" duration="4927000" />
       <workItem from="1727729592898" duration="1372000" />
-      <workItem from="1727804482253" duration="4662000" />
+      <workItem from="1727804482253" duration="5323000" />
+      <workItem from="1728071629027" duration="2457000" />
+      <workItem from="1728840888864" duration="10686000" />
     </task>
     <task id="LOCAL-00001" summary="Alterações 22-09">
       <option name="closed" value="true" />
@@ -227,7 +255,15 @@
       <option name="project" value="LOCAL" />
       <updated>1727809150984</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Alterações 01-10">
+      <option name="closed" value="true" />
+      <created>1727809182944</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1727809182944</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -243,15 +279,15 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/test_main.py</url>
-          <line>12</line>
+          <line>22</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/fastApiProject$fastApiProject.coverage" NAME="fastApiProject Coverage Results" MODIFIED="1727808414365" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/fastApiProject$fastApiProject.coverage" NAME="fastApiProject Coverage Results" MODIFIED="1728869315385" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/fastApiProject$main.coverage" NAME="main Coverage Results" MODIFIED="1727804791824" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/fastApiProject$.coverage" NAME=" Coverage Results" MODIFIED="1727804738539" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/fastApiProject$.coverage" NAME=" Coverage Results" MODIFIED="1728870596315" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

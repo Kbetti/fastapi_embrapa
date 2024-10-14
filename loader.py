@@ -8,7 +8,7 @@ def load_csv_from_url(url: str, delimiter=';', header=0):
         csv_data = StringIO(response.text)
         try:
             df = pd.read_csv(csv_data, delimiter=delimiter, header=header)
-            df.fillna('None', inplace=True)  # ou outro método apropriado
+            df.fillna('None', inplace=True)
             return df
         except pd.errors.ParserError as e:
             raise ValueError(f"Erro ao processar o CSV: {e}")
