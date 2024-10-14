@@ -1,7 +1,6 @@
 from fastapi import FastAPI, Depends, HTTPException
-from auth import verify_token, create_token  # Importe a função de criação de token
-from loader import load_csv_from_url, load_local_csv
-import os
+from auth.auth import verify_token, create_token  # Importe a função de criação de token
+from loader.loader import load_csv_from_url
 import logging
 
 logging.basicConfig(level=logging.INFO)

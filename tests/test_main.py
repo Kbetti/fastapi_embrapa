@@ -1,6 +1,6 @@
 from fastapi.testclient import TestClient
-from main import app  # Certifique-se de que o app está sendo importado corretamente
-from auth import create_token  # Importe a função para criar o token
+from app.main import app  # Certifique-se de que o app está sendo importado corretamente
+from auth.auth import create_token  # Importe a função para criar o token
 
 client = TestClient(app)
 
