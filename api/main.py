@@ -43,18 +43,17 @@ def generate_token():
 
 @app.get("/{file_id}", tags=["CSV Data"])
 def get_csv_by_id(file_id: str, token: dict = Depends(verify_token)):
-   """
-
-   Retorna os dados de um CSV específico identificado por file_id.
-   """
-   url = CSV_URLS.get(file_id)
-   if url:
-       try:
-           df = load_csv_from_url(url)
-           if df is None or df.empty:
-               raise HTTPException(status_code=404, detail="Dados do CSV estão vazios")
-           return df.to_dict(orient='records')
-       except ValueError as e:
-           raise HTTPException(status_code=400, detail=str(e))
-   else:
+    """
+    Retorna os dados de um CSV específico identificado por file_id.
+    """
+    url = CSV_URLS.get(file_id)
+    if url:
+        try:
+            df = load_csv_from_url(url)
+            if df is None or df.empty:
+                raise HTTPException(status_code=404, detail="Dados do CSV estão vazios")
+            return df.to_dict(orient='records')
+        except ValueError as e:
+            raise HTTPException(status_code=400, detail=str(e))
+    else:
         raise HTTPException(status_code=404, detail="CSV não encontrado")
