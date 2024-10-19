@@ -18,6 +18,7 @@ def create_token(data: dict):
     return encoded_jwt
 
 
+
 def verify_token(credentials: HTTPAuthorizationCredentials = Security(security)):
     token = credentials.credentials
     try:
