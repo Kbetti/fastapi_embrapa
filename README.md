@@ -132,3 +132,98 @@ Crie um arquivo `vercel.json` na raiz do projeto se necessário. Ele deve inclui
 **3. Deploy**:  
    * Acesse o painel da Vercel, clique em "Deploy" para realizar o deploy da sua aplicação.  
    * A Vercel fará o build automaticamente e, em alguns minutos, sua aplicação estará disponível online.
+     
+
+# **Especificações da API**
+
+Cria uma instância da API com um título, descrição e versão.
+```
+`app = FastAPI(`  
+   `title="Embrapa CSV API",`  
+   `description="API para consulta de dados CSV da Embrapa",`  
+   `version="1.0.0"`  
+`)`
+```
+Cria uma instância da API com um título, descrição e versão.
+
+### **URLs dos CSVs**
+
+Um dicionário chamado `CSV_URLS` é definido para armazenar as URLs dos arquivos CSV disponíveis:
+
+* `producao`: Produção de vinhos.  
+* `processa`: Processamento de vinhos viníferas.  
+* `comercio`: Dados de comércio de vinhos.  
+* `importacao`: Dados de importação de vinhos.  
+* `exportacao`: Dados de exportação de vinhos.
+
+### **Endpoints**
+
+#### **1\. Endpoint Raiz**
+
+```
+`@app.get("/", tags=["Root"])`  
+`def read_root():`  
+   `return {"message": "API para consulta de dados CSV da Embrapa"}`
+```
+* **Método**: `GET`  
+* **Descrição**: Retorna uma mensagem de boas-vindas à API.
+
+**Resposta**:  
+```
+`{`  
+  `"message": "API para consulta de dados CSV da Embrapa"`  
+`}`
+
+```
+
+#### **2\. Endpoint de Geração de Token**
+
+```
+`@app.post("/token", tags=["Authentication"])`  
+`def generate_token():`  
+    `"""`  
+    `Endpoint para gerar o token JWT.`  
+    `"""`  
+    `...`
+```
+
+* **Método**: `POST`  
+* **Descrição**: Gera um token JWT para autenticação.
+
+**Resposta**:  
+```
+`{`  
+  `"token": "<JWT_TOKEN>"`  
+`}`
+```
+
+
+#### **3\. Endpoint para Obter Dados CSV**
+``` 
+`@app.get("/{file_id}", tags=["CSV Data"])`  
+`def get_csv_by_id(file_id: str, token: dict = Depends(verify_token)):`  
+    `"""`  
+    `Retorna os dados de um CSV específico identificado por file_id.`  
+    `"""`  
+    `...`
+```
+
+* **Método**: `GET`  
+* **Parâmetros**:  
+  * `file_id`: Identificador do arquivo CSV a ser acessado.  
+  * `token`: Token JWT para autenticação, verificado através da função `verify_token`.  
+* **Descrição**: Retorna os dados de um CSV específico. Se o `file_id` não existir ou os dados estiverem vazios, são retornados os seguintes códigos de erro:  
+  * **404**: CSV não encontrado.  
+  * **400**: Dados do CSV estão vazios ou ocorreu um erro na leitura.
+
+**Resposta** (exemplo):  
+```
+`[`  
+  `{`  
+    `"coluna1": "valor1",`  
+    `"coluna2": "valor2",`  
+    `...`  
+  `},`  
+  `...`
+ `]`
+```
