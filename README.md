@@ -53,6 +53,9 @@ fastApiProject/
 Aqui está um diagrama simples que ilustra a arquitetura da aplicação:
 
 
+![image](https://github.com/user-attachments/assets/74f557ee-6767-4489-8773-b027ffc917b1)
+
+
 
 ---
 
