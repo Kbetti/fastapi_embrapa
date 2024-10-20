@@ -80,7 +80,7 @@ Este módulo é responsável por processar e carregar dados. Ele inclui:
 * Scripts para **importar dados de arquivos**.  
 * Funções de pré-processamento de dados antes de serem enviados para a API ou banco de dados.
 
-  ---
+---
 
 ### **6.Execução da Aplicação**
 
@@ -93,25 +93,10 @@ Este módulo é responsável por processar e carregar dados. Ele inclui:
    
 3. **Acesse a aplicação**: Abra seu navegador e vá para: http://127.0.0.1:8000.
 
-  📖 #### **Documentação automática:**
+  #### 📖 **Documentação automática:**
 
 FastAPI gera automaticamente a documentação interativa da AP que e está disponível em:
 http://localhost:8000/docs.
 
 
   ---
-
-  ### **7.Testes Automatizados**
-
-Os testes estão localizados no diretório **tests/**. Eles verificam a funcionalidade da aplicação e garantem que o código está funcionando conforme o esperado.
-
-#### **Para rodar os testes:**
-
-* **Instale o pytest** (se não estiver instalado):  
-  `pip install pytest`
-     
-* **Execute os testes**:  
-     `pytest`  
-
-
-Isso executará todos os testes contidos no diretório `tests/` e exibirá um resumo dos resultados.
