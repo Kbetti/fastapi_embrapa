@@ -14,8 +14,28 @@ Este é um projeto de API desenvolvido com **FastAPI**, voltado para o mercado d
 ---
 
 ## 📁 Estrutura do Projeto
-![image](https://github.com/user-attachments/assets/ffe122de-07a8-49c0-af88-09cc6bbad037)
 
+```
+fastApiProject/
+│
+├── api/                  # Módulo principal da API
+│   ├── __init__.py      
+│   └── main.py          # Ponto de entrada da aplicação FastAPI; configura rotas e inicializa o servidor
+│
+├── auth/                 # Módulo de autenticação
+│   ├── __init__.py      
+│   └── auth.py          # Implementa as funcionalidades de autenticação (login, registro, etc.)
+│
+├── loader/               # Módulo para carregar dados
+│   ├── __init__.py      
+│   └── loader.py        # Contém funções para carregar e manipular dados 
+│
+├── requirements.txt      # Lista de dependências do projeto (bibliotecas necessárias)
+├── venv/                 # Ambiente virtual para isolar as dependências do projeto
+├── README.md             # Documentação do projeto 
+└── vercel.json           # Configuração específica para deployment na Vercel
+
+```
 
 * **app/**: O diretório principal do código da aplicação.  
   * Pode conter os endpoints, lógica de negócios, e funções principais do FastAPI.  
@@ -23,8 +43,7 @@ Este é um projeto de API desenvolvido com **FastAPI**, voltado para o mercado d
   * Provavelmente contém a lógica de login, geração de tokens JWT, e verificação de permissões.  
 * **loader/**: Este diretório parece lidar com o carregamento e processamento de dados.  
   * Pode conter scripts ou serviços que manipulam dados para serem usados pela aplicação.  
-* **tests/**: Contém os testes automatizados da aplicação.  
-  * Geralmente inclui testes de unidade, testes de integração e testes funcionais para validar a integridade do código.
+
 
 
 ---
