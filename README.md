@@ -51,15 +51,20 @@ Aqui está um diagrama simples que ilustra a arquitetura da aplicação:
   
     `git clone https://github.com/usuario/projeto_fastapi_embrapa.git`  
     `cd projeto_fastapi_embrapa`
+
+---
      
 ### **2.Instale as dependências**:  
       
      `pip install -r requirements.txt`  
+
+---
  
 ### **3.Configuração de variáveis de ambiente**:
 O projeto pode requerer a configuração de variáveis de ambiente, como chaves de API, URLs de banco de dados, etc. 
 Verifique ou configure um arquivo `.env` ou defina as variáveis diretamente no ambiente.
 
+---
 
 ### **4. Autenticação e Segurança**
 
@@ -72,6 +77,7 @@ O módulo **auth/** lida com a autenticação da aplicação. Aqui estão alguns
   * Verificação de Token:
     Rotas protegidas devem verificar o token antes de permitir o acesso.  
   
+---
 
 ### **5.Loader (Carregamento de Dados)**
 
@@ -96,7 +102,33 @@ Este módulo é responsável por processar e carregar dados. Ele inclui:
   #### 📖 **Documentação automática:**
 
 FastAPI gera automaticamente a documentação interativa da AP que e está disponível em:
-http://localhost:8000/docs.
+http://127.0.0.1:8000/docs.
 
+ ---
+## **Deploy na Vercel**
 
-  ---
+A aplicação foi implantada na Vercel, facilitando o acesso remoto e garantindo alta performance. A Vercel é conhecida pela facilidade de integração com projetos FastAPI e por otimizar o processo de deploy. Para acessar a versão de produção da aplicação, utilize a URL fornecida no painel de controle da Vercel após o deploy.
+
+### **Passos para o Deploy na Vercel:**
+
+**1. Configuração inicial**:  
+   * Certifique-se de que o projeto está configurado corretamente no GitHub ou em outro repositório Git.  
+   * No painel da Vercel, conecte seu repositório e configure as variáveis de ambiente necessárias (como chaves de API e strings de conexão com bancos de dados).  
+
+ **2.Configurar o projeto para Vercel**:
+
+Crie um arquivo `vercel.json` na raiz do projeto se necessário. Ele deve incluir as seguintes configurações básicas:  
+```
+`{`  
+  `"builds": [`  
+    `{ "src": "app/main.py", "use": "@vercel/python" }`  
+  `],`  
+  `"routes": [`  
+    `{ "src": "/(.*)", "dest": "app/main.py" }`  
+  `]`  
+`}`
+```
+  
+**3. Deploy**:  
+   * Acesse o painel da Vercel, clique em "Deploy" para realizar o deploy da sua aplicação.  
+   * A Vercel fará o build automaticamente e, em alguns minutos, sua aplicação estará disponível online.
